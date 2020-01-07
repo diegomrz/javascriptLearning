@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Curso Javascript</title>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" name="nome" id="nome"/>
+			<button class="botao">Adicionar</button>
+		</div>
+		<script>
+			
+			/* Aula 12 - Trabalhando com a DOM*/
+			console.log("Aula 12 - Trabalhando com a DOM");
+			
+			// var inputElement = document.getElementsByTagName('input')[0];
+			var inputElement = document.querySelector('input[name=nome]');
+			var btnElement = document.querySelector('button.botao');
+			
+			btnElement.onclick = function(){
+				var text = inputElement.value;
+				alert(text);
+			}
+		</script>
+		
+	</body>
+</html>  

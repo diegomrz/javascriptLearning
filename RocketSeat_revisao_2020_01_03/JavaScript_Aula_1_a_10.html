@@ -1,0 +1,144 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Curso Javascript</title>
+	</head>
+	<body>
+		<script>
+			/* Aula 1 e 2 - Introdução e configuração de ambiente*/
+			console.log("Aula 1 e 2 - Introdução e configuração de ambiente");
+			/* Printa uma string no console */
+			console.log("Hello world!");
+
+			/* Aula 3 - Variáveis e dados*/
+			console.log("Aula 3 - Variáveis e dados");
+			var nome = "Diego";
+			var idade = 30;
+			var peso = 79.9;
+			var humano = true;
+
+			var alunos = ['Diego', 'Gabriel', 'Lucas'];
+
+			var aluno = {
+				nome: "Diego",
+				idade: 30,
+				peso: 79.9,
+				humano: true
+			};
+
+			console.log("Nome: " + aluno.nome);
+			console.log("Idade: " + aluno.idade)
+
+			/* Aula 4 - Operações matemáticas*/
+			console.log("Aula 4 - Operações matemáticas");
+			var x = 10, y = 5;
+			var resultado = x + y;
+			console.log(resultado);
+			var resultado = x - y;
+			console.log(resultado);
+			var resultado = x * y;
+			console.log(resultado);
+			var resultado = x / y;
+			console.log(resultado);
+			var resultado = x % y;
+			console.log(resultado);
+
+			x += 3;
+			console.log(x);
+			x -= 3;
+			console.log(x);
+			x *= 3;
+			console.log(x);
+			x /= 3;
+			console.log(x);
+			x %= 3;
+			console.log(x);
+
+			/* Aula 5 - Funções*/
+			console.log("Aula 5 - Funções");
+
+			function soma (n1, n2){
+				var resultado = n1 + n2;
+				return resultado;
+			}
+
+			var res = soma(1, 2);
+			console.log(res);			
+
+			/* Aula 6 - Condicionais */
+			console.log("Aula 6 - Condicionais");
+
+			function retornaSexo(sexo){
+				//M, F
+				//Masculino, Feminino
+				/* if (sexo === 'M'){
+					return "Masculino";
+				}else if (sexo === 'F'){
+					return "Feminino";
+				}else{
+					return "Outro";
+				}*/
+
+				switch (sexo){
+					case 'M': return 'Masculino';
+					case 'F': return 'Feminino';
+					default: return 'Outro';
+				}
+			}
+
+			var resultado = retornaSexo('M');
+			console.log(resultado)
+
+			/* Aula 7 - Operadores Lógicos*/
+			console.log("Aula 7 - Operadores Lógicos");
+
+			//AND - OR - NOT
+			var sexo = 'M';
+			var masculino = (sexo === 'M');
+			console.log(masculino);
+			
+			/* Aula 8 - Condição ternária*/
+			console.log("Aula 8 - Condição ternária");
+
+			//Condição ternária
+			masculino = (sexo === 'M') ? 'Masculino' : 'Nada';
+			console.log(masculino);
+
+			/* Aula 9 - Estruturas de Repetição*/
+			console.log("Aula 9 - Estruturas de Repetição");
+
+			//For - While
+			for(var i = 1 ; i < 100; i++){
+				console.log("For count " + i);
+			}
+
+			var j = 0;
+			while(j <= 100){
+				console.log("While count "+ j);
+				j++;
+			}
+
+			j = 0;
+			do{
+				console.log("Do While count "+ j);
+				j++;
+			}while(j <= 100);
+
+			/* Aula 10 - interval e timeOut*/
+			console.log("Aula 10 - interval e timeOut");
+
+			//SetTimeOut and Interval
+			function showOnInterval(){
+				console.log("showOnInterval")
+			}
+
+			function showOnTimeOut(){
+				console.log("showOnTimeOut")
+			}
+
+			setInterval(showOnInterval, 1000);
+			setTimeout(showOnTimeOut, 2000);
+		
+		</script>
+	</body>
+</html>  
